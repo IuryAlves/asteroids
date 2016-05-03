@@ -8,7 +8,7 @@ public class Player : MonoBehaviour {
 	// variavel que determina a minha velocidade
 	// sempre que uma variavel for publica vc pode mudar o valor dela direto no objeto(prefab), 
 	// por isto deve tomar um certo cuidado, pois as vezes mudamos o valor no codigo mas no objeto fica outro.
-	public float speed = 10f;
+	private float speed = 10f;
 	
 	// Nesta função é chamada apenas quando inicia
 	void Start () {
@@ -53,7 +53,7 @@ public class Player : MonoBehaviour {
 		
 		// faz o efeito de rotacionar ao virar
 		// o objeto Quaternion é usado para controlar rotação 
-		transform.rotation = Quaternion.Euler (0.0f, GetComponent<Rigidbody2D> ().velocity.x * -5, 0.0f);
+		// transform.rotation = Quaternion.Euler (0.0f, GetComponent<Rigidbody2D> ().velocity.x * -5, 0.0f);
 		
 	}
 	
